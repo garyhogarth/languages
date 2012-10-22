@@ -4,6 +4,20 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+    {
+        "type": "package",
+        "package": {
+            "name": "sonata-project/goutte",
+            "version": "master",
+            "source": {
+                    "url": "https://github.com/sonata-project/SonataGoutteBundle.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+        }
+    }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.1.*",
@@ -24,7 +38,9 @@
         "sonata-project/admin-bundle": "*",
         "sonata-project/user-bundle": "*",
         "sonata-project/easy-extends-bundle": "*",
-        "sonata-project/doctrine-orm-admin-bundle": "*"
+        "sonata-project/doctrine-orm-admin-bundle": "*",
+        "fabpot/goutte": "dev-master",
+        "sonata-project/goutte":"*"
     },
     "scripts": {
         "post-install-cmd": [

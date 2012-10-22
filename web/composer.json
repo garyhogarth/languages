@@ -4,6 +4,32 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+    {
+        "type": "package",
+        "package": {
+            "name": "sonata-project/goutte",
+            "version": "/bundles/Sonata/GoutteBundle",
+            "source": {
+                    "url": "https://github.com/sonata-project/SonataGoutteBundle.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+        }
+    },
+    {
+        "type": "package",
+        "package": {
+            "name": "fabpot/goutte",
+            "version": "5ecceb7c28a428fb93f283982cc4f5edfd96630b",
+            "source": {
+                    "url": "git://github.com/fabpot/Goutte.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+        }
+    }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.1.*",
@@ -19,6 +45,8 @@
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
         "knplabs/knp-menu-bundle":"*",
+        "fabpot/goutte": "*",
+        "sonata-project/goutte":"*",
         "friendsofsymfony/user-bundle": "*",
         "sonata-project/jquery-bundle": "*",
         "sonata-project/admin-bundle": "*",
