@@ -1,0 +1,20 @@
+aoceu_verb:
+    resource: "@AoceuVerbBundle/Resources/config/routing.yml"
+    prefix:   /
+
+aoceu_tools:
+    resource: "@AoceuToolsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+aoceu_user:
+    resource: "@AoceuUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+aoceu_site:
+    resource: "@AoceuSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal

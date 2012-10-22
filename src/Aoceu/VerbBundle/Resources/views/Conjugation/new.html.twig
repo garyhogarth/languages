@@ -1,0 +1,20 @@
+{% extends 'AoceuSiteBundle::layout.html.twig' %}
+
+{% block bodyContent %}
+<h1>Conjugation creation</h1>
+
+<form action="{{ path('admin_conjugation_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('admin_conjugation') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

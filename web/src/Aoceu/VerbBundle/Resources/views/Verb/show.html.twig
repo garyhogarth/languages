@@ -1,0 +1,37 @@
+{% extends 'AoceuSiteBundle::layout.html.twig' %}
+
+{% block bodyContent %}
+<h1>Verb</h1>
+
+<table class="table table-striped record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Verb</th>
+            <td>{{ entity.verb }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="unstyled record_actions">
+    <li>
+        <a class="btn" href="{{ path('admin_verb') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a class="btn" href="{{ path('admin_verb_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('admin_verb_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

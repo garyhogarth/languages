@@ -1,0 +1,37 @@
+{% extends 'AoceuSiteBundle::layout.html.twig' %}
+
+{% block bodyContent %}
+<h1>Tense</h1>
+
+<table class="table record_properties table-striped">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Tense</th>
+            <td>{{ entity.tense }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="unstyled record_actions">
+    <li>
+        <a href="{{ path('admin_tense') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a class="btn" href="{{ path('admin_tense_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('admin_tense_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

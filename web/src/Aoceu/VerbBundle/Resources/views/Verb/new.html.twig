@@ -1,0 +1,20 @@
+{% extends 'AoceuSiteBundle::layout.html.twig' %}
+
+{% block bodyContent %}
+<h1>Verb creation</h1>
+
+<form action="{{ path('admin_verb_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="unstyled record_actions">
+    <li>
+        <a class="btn" href="{{ path('admin_verb') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

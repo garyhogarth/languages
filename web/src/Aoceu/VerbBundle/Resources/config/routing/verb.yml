@@ -1,0 +1,30 @@
+admin_verb:
+    pattern:  /
+    defaults: { _controller: "AoceuVerbBundle:Verb:index" }
+
+admin_verb_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AoceuVerbBundle:Verb:show" }
+
+admin_verb_new:
+    pattern:  /new
+    defaults: { _controller: "AoceuVerbBundle:Verb:new" }
+
+admin_verb_create:
+    pattern:  /create
+    defaults: { _controller: "AoceuVerbBundle:Verb:create" }
+    requirements: { _method: post }
+
+admin_verb_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AoceuVerbBundle:Verb:edit" }
+
+admin_verb_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AoceuVerbBundle:Verb:update" }
+    requirements: { _method: post }
+
+admin_verb_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AoceuVerbBundle:Verb:delete" }
+    requirements: { _method: post }

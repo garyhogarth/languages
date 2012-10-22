@@ -1,0 +1,30 @@
+admin_person:
+    pattern:  /
+    defaults: { _controller: "AoceuVerbBundle:Person:index" }
+
+admin_person_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AoceuVerbBundle:Person:show" }
+
+admin_person_new:
+    pattern:  /new
+    defaults: { _controller: "AoceuVerbBundle:Person:new" }
+
+admin_person_create:
+    pattern:  /create
+    defaults: { _controller: "AoceuVerbBundle:Person:create" }
+    requirements: { _method: post }
+
+admin_person_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AoceuVerbBundle:Person:edit" }
+
+admin_person_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AoceuVerbBundle:Person:update" }
+    requirements: { _method: post }
+
+admin_person_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AoceuVerbBundle:Person:delete" }
+    requirements: { _method: post }

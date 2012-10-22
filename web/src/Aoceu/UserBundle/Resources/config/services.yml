@@ -1,0 +1,7 @@
+parameters:
+#    aoceu_user.example.class: Aoceu\UserBundle\Example
+
+services:
+#    aoceu_user.example:
+#        class: %aoceu_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,18 @@
+AoceuVerbBundle_verb_admin:
+    resource: "@AoceuVerbBundle/Resources/config/routing/verb.yml"
+    prefix:   /admin/verb
+    
+AoceuVerbBundle_admin_tense:
+    resource: "@AoceuVerbBundle/Resources/config/routing/tense.yml"
+    prefix:   /admin/tense
+    
+AoceuVerbBundle_admin_person:
+    resource: "@AoceuVerbBundle/Resources/config/routing/person.yml"
+    prefix:   /admin/person
+
+AoceuVerbBundle_admin_conjugation:
+    resource: "@AoceuVerbBundle/Resources/config/routing/conjugation.yml"
+    prefix:   /admin/conjugation
+
+
+

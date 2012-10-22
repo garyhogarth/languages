@@ -1,0 +1,30 @@
+admin_tense:
+    pattern:  /
+    defaults: { _controller: "AoceuVerbBundle:Tense:index" }
+
+admin_tense_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AoceuVerbBundle:Tense:show" }
+
+admin_tense_new:
+    pattern:  /new
+    defaults: { _controller: "AoceuVerbBundle:Tense:new" }
+
+admin_tense_create:
+    pattern:  /create
+    defaults: { _controller: "AoceuVerbBundle:Tense:create" }
+    requirements: { _method: post }
+
+admin_tense_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AoceuVerbBundle:Tense:edit" }
+
+admin_tense_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AoceuVerbBundle:Tense:update" }
+    requirements: { _method: post }
+
+admin_tense_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AoceuVerbBundle:Tense:delete" }
+    requirements: { _method: post }

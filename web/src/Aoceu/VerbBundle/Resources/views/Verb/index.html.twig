@@ -1,0 +1,40 @@
+{% extends 'AoceuSiteBundle::layout.html.twig' %}
+
+{% block bodyContent %}
+<h1>Verb list</h1>
+<table class="table table-striped records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Verb</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('admin_verb_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.verb }}</td>
+            <td>
+                <ul class="unstyled">
+                    <li>
+                        <a class="btn btn-mini btn-primary" href="{{ path('admin_verb_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-mini" href="{{ path('admin_verb_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul class="unstyled">
+    <li>
+        <a class="btn" href="{{ path('admin_verb_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}

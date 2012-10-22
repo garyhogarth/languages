@@ -1,0 +1,30 @@
+admin_conjugation:
+    pattern:  /
+    defaults: { _controller: "AoceuVerbBundle:Conjugation:index" }
+
+admin_conjugation_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AoceuVerbBundle:Conjugation:show" }
+
+admin_conjugation_new:
+    pattern:  /new
+    defaults: { _controller: "AoceuVerbBundle:Conjugation:new" }
+
+admin_conjugation_create:
+    pattern:  /create
+    defaults: { _controller: "AoceuVerbBundle:Conjugation:create" }
+    requirements: { _method: post }
+
+admin_conjugation_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AoceuVerbBundle:Conjugation:edit" }
+
+admin_conjugation_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AoceuVerbBundle:Conjugation:update" }
+    requirements: { _method: post }
+
+admin_conjugation_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AoceuVerbBundle:Conjugation:delete" }
+    requirements: { _method: post }
