@@ -1,6 +1,18 @@
 {
-    "hash": "c788804fd1757a0f34deb1602dceedbf",
+    "hash": "52cfd6ebedcfea8775d4091c4e6c9d38",
     "packages": [
+        {
+            "name": "Sonata/GoutteBundle",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataGoutteBundle.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "installation-source": "source",
+            "time": "1337934790"
+        },
         {
             "name": "doctrine/common",
             "version": "2.3.x-dev",
@@ -277,12 +289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Goutte",
-                "reference": "e1c3306617e350ac17e7631166fd3fd7d689e8ea"
+                "reference": "6685f83d77075fa655b0fe25a408a8dbfcc330c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Goutte/zipball/e1c3306617e350ac17e7631166fd3fd7d689e8ea",
-                "reference": "e1c3306617e350ac17e7631166fd3fd7d689e8ea",
+                "url": "https://github.com/fabpot/Goutte/zipball/6685f83d77075fa655b0fe25a408a8dbfcc330c3",
+                "reference": "6685f83d77075fa655b0fe25a408a8dbfcc330c3",
                 "shasum": ""
             },
             "require": {
@@ -295,7 +307,7 @@
                 "ext-curl": "*",
                 "guzzle/http": "2.8.*"
             },
-            "time": "1349861753",
+            "time": "1350931320",
             "type": "application",
             "extra": {
                 "branch-alias": {
@@ -1154,12 +1166,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "567fc0df42c145148f51899431aa342d7700ab45"
+                "reference": "a32584adf3d6e2269ff6950202b2a399d553db8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataAdminBundle/zipball/63e95a036d3103a9997fadae8779d5ede345977e",
-                "reference": "63e95a036d3103a9997fadae8779d5ede345977e",
+                "url": "https://github.com/sonata-project/SonataAdminBundle/zipball/a32584adf3d6e2269ff6950202b2a399d553db8e",
+                "reference": "a32584adf3d6e2269ff6950202b2a399d553db8e",
                 "shasum": ""
             },
             "require": {
@@ -1175,7 +1187,7 @@
                 "sonata-project/doctrine-orm-admin-bundle": "dev-master",
                 "sonata-project/intl-bundle": "dev-master"
             },
-            "time": "1350295667",
+            "time": "1350979875",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1460,18 +1472,6 @@
                 "client",
                 "export"
             ]
-        },
-        {
-            "name": "sonata-project/goutte",
-            "version": "master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataGoutteBundle.git",
-                "reference": "master"
-            },
-            "type": "library",
-            "installation-source": "source",
-            "time": "1337934790"
         },
         {
             "name": "sonata-project/jquery-bundle",
@@ -1804,12 +1804,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "bb636c857abea60ac3a27ce0ab62ea979b3aad58"
+                "reference": "28482f8216de3289f35519f32d829499a5ffb632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/bb636c857abea60ac3a27ce0ab62ea979b3aad58",
-                "reference": "bb636c857abea60ac3a27ce0ab62ea979b3aad58",
+                "url": "https://github.com/symfony/symfony/zipball/28482f8216de3289f35519f32d829499a5ffb632",
+                "reference": "28482f8216de3289f35519f32d829499a5ffb632",
                 "shasum": ""
             },
             "require": {
@@ -1858,7 +1858,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "1350717030",
+            "time": "1350937201",
             "type": "library",
             "extra": {
                 "branch-alias": {

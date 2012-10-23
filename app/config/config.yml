@@ -65,6 +65,22 @@ knp_menu:
         template: knp_menu.html.twig
     templating: false # if true, enables the helper for PHP templates
     default_renderer: twig # The renderer to use, list is also available by default
+    
+#sonata_goutte:
+#    class: Sonata\GoutteBundle\Manager
+#    clients:
+#        default:
+#            config:
+#                adapter: Zend\Http\Client\Adapter\Socket
+#
+#        curl:
+#            config:
+#                maxredirects: 0
+#                timeout: 30
+#                useragent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US) Gecko/20100401 Firefox/3.6.3
+#                adapter: Sonata\GoutteBundle\Adapter\Curl
+#                verbose_log: %kernel.logs_dir%/curl.log
+#                verbose: true
 
 #fos_user:
 #    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'

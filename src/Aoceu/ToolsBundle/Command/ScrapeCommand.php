@@ -6,7 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Output\OutputInterface;        
+use Goutte\Client;
 
 class ScrapeCommand extends ContainerAwareCommand {
 
@@ -23,28 +24,26 @@ class ScrapeCommand extends ContainerAwareCommand {
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {
-        
         $dialog = $this->getHelperSet()->get('dialog');
         
         $output->writeln('Importing');
-        
-        $client = $this->getHelperSet()->get('goutte')
-            ->getNamedClient('curl');
 
+        $client = new Client();
+        
         $crawler = $client->request('GET', 'http://www.spanishdict.com/conjugate/comer');
-        
-        var_dump($crawler);exit;
-
-        $response = $client->getResponse();
-
-        $content = $response->getContent();
-        
-        // Load a file 
-        $html->load_file('http://www.spanishdict.com/conjugate/comer'); 
-        
-        $firstTable = $html->find('.table', 0);
-        
-        var_dump($firstTable);exit;
-        
+        $nodes = $crawler->filter('.table-condensed td');
+        foreach ($nodes as $node) {
+            echo $this->get_inner_html($node);
+        }
     }
+    
+    private function get_inner_html( $node ) { 
+        $innerHTML= ''; 
+        $children = $node->childNodes; 
+        foreach ($children as $child) { 
+            $innerHTML .= $child->ownerDocument->saveXML( $child ); 
+        } 
+
+        return $innerHTML; 
+    } 
 }
