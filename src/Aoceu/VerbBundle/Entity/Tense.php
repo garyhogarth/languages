@@ -22,6 +22,13 @@ class Tense
     private $id;
 
     /**
+     * @var integer $rowId
+     *
+     * @ORM\Column(name="row_id", type="string", length=20)
+     */
+    private $rowId;
+
+    /**
      * @var string $tense
      *
      * @ORM\Column(name="tense", type="string", length=255)

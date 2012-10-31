@@ -26,6 +26,9 @@ class ScrapeCommand extends ContainerAwareCommand {
     protected function execute(InputInterface $input, OutputInterface $output) {
         $dialog = $this->getHelperSet()->get('dialog');
         
+        $personRepository = $this->getDoctrine()
+                ->getRepository('AoceuVerbBudle:Person');
+
         $output->writeln('Importing');
 
         $client = new Client();
@@ -33,7 +36,19 @@ class ScrapeCommand extends ContainerAwareCommand {
         $crawler = $client->request('GET', 'http://www.spanishdict.com/conjugate/comer');
         $nodes = $crawler->filter('.table-condensed td');
         foreach ($nodes as $node) {
-            echo $this->get_inner_html($node);
+            $class = $node->getAttribute('class');
+            
+            if ($class == 'verb-pronoun-row') {
+                $person = $personRepository->findOneByCompareString($this->get_inner_html($node));
+                $count = 0;
+            }
+            
+            if ($class != 'verb-pronoun-row') {
+                $count ++;
+                $conjugation = $this->get_inner_html($node);
+                
+                echo $person->__toString()." - ".$conjugation->__toString();
+            }
         }
     }
     

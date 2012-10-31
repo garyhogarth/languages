@@ -12,6 +12,7 @@ class PersonType extends AbstractType
     {
         $builder
             ->add('pronoun')
+            ->add('compareString')
             ->add('standard')
         ;
     }
