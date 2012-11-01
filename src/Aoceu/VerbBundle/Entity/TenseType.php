@@ -5,12 +5,12 @@ namespace Aoceu\VerbBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Aoceu\VerbBundle\Entity\Verb
+ * Aoceu\VerbBundle\Entity\TenseType
  *
- * @ORM\Table(name="verb")
- * @ORM\Entity(repositoryClass="Aoceu\VerbBundle\Entity\VerbRepository")
+ * @ORM\Table(name="tense_type")
+ * @ORM\Entity(repositoryClass="Aoceu\VerbBundle\Entity\TenseTypeRepository")
  */
-class Verb
+class TenseType
 {
     /**
      * @var integer $id
@@ -22,16 +22,15 @@ class Verb
     private $id;
 
     /**
-     * @var string $verb
+     * @var string $type
      *
-     * @ORM\Column(name="verb", type="string", length=100)
+     * @ORM\Column(name="type", type="string", length=100)
      */
-    private $verb;
+    private $type;
 
-    
     public function __toString()
     {
-        return $this->getVerb();
+        return $this->getType();
     }
 
     /**
@@ -45,25 +44,25 @@ class Verb
     }
 
     /**
-     * Set verb
+     * Set type
      *
-     * @param string $verb
-     * @return Verb
+     * @param string $type
+     * @return TenseType
      */
-    public function setVerb($verb)
+    public function setType($type)
     {
-        $this->verb = $verb;
+        $this->type = $type;
     
         return $this;
     }
 
     /**
-     * Get verb
+     * Get type
      *
      * @return string 
      */
-    public function getVerb()
+    public function getType()
     {
-        return $this->verb;
+        return $this->type;
     }
 }

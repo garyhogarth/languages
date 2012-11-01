@@ -22,13 +22,6 @@ class Person
     private $id;
 
     /**
-     * @var string $compareString
-     *
-     * @ORM\Column(name="compare_string", type="string", length=20)
-     */
-    private $compareString;
-
-    /**
      * @var string $pronoun
      *
      * @ORM\Column(name="pronoun", type="string", length=20)
@@ -102,28 +95,5 @@ class Person
     public function getStandard()
     {
         return $this->standard;
-    }
-
-    /**
-     * Set compareString
-     *
-     * @param string $compareString
-     * @return Person
-     */
-    public function setCompareString($compareString)
-    {
-        $this->compareString = $compareString;
-    
-        return $this;
-    }
-
-    /**
-     * Get compareString
-     *
-     * @return string 
-     */
-    public function getCompareString()
-    {
-        return $this->compareString;
     }
 }

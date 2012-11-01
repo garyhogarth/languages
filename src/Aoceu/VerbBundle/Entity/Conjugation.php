@@ -46,13 +46,24 @@ class Conjugation
     private $person;
 
     /**
-     * @var \stdClass $conjugation
+     * @var string $conjugation
      *
-     * @ORM\ManyToOne(targetEntity="Conjugation", inversedBy="Conjugations")
-     * @ORM\JoinColumn(name="conjugation_id", referencedColumnName="id")
+     * @ORM\Column(name="conjugation", type="string", length=255)
      */
     private $conjugation;
+    
+    /**
+     * @var boolean $irregular
+     *
+     * @ORM\Column(name="irregular", type="boolean")
+     */
+    private $irregular = 0;
 
+    
+    public function __toString()
+    {
+        return $this->getConjugation();
+    }
 
     /**
      * Get id
@@ -134,12 +145,58 @@ class Conjugation
     }
 
     /**
-     * Set conjugation
+     * Set standard
      *
-     * @param Conjugation $conjugation
+     * @param bool $standard
      * @return Conjugation
      */
-    public function setConjugation(Conjugation $conjugation)
+    public function setStandard(\bool $standard)
+    {
+        $this->standard = $standard;
+    
+        return $this;
+    }
+
+    /**
+     * Get standard
+     *
+     * @return bool 
+     */
+    public function getStandard()
+    {
+        return $this->standard;
+    }
+
+    /**
+     * Set irregular
+     *
+     * @param boolean $irregular
+     * @return Conjugation
+     */
+    public function setIrregular($irregular)
+    {
+        $this->irregular = $irregular;
+    
+        return $this;
+    }
+
+    /**
+     * Get irregular
+     *
+     * @return boolean 
+     */
+    public function getIrregular()
+    {
+        return $this->irregular;
+    }
+
+    /**
+     * Set conjugation
+     *
+     * @param string $conjugation
+     * @return Conjugation
+     */
+    public function setConjugation($conjugation)
     {
         $this->conjugation = $conjugation;
     
@@ -149,7 +206,7 @@ class Conjugation
     /**
      * Get conjugation
      *
-     * @return Conjugation 
+     * @return string 
      */
     public function getConjugation()
     {
